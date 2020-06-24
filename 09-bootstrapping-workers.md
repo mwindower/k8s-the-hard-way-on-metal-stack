@@ -59,8 +59,8 @@ Patch node objects to contain the proper internal and external address.
 This can not be done with kubectl!
 
 ```
-export WORKER_EXTERNAL_IPS=("212.34.83.24" "212.34.83.25" "212.34.83.26")
-export WORKER_INTERNAL_IPS=("10.3.12.5" "10.3.12.6" "10.3.12.7")
+export WORKER_EXTERNAL_IPS=()
+export WORKER_INTERNAL_IPS=()
 
 kubectl proxy --port=8080 &
 for i in {0..2}; do \

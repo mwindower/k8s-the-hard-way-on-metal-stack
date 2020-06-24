@@ -11,8 +11,6 @@ ip a a ${KUBERNETES_PUBLIC_ADDRESS} dev lo
 Generate admin kubeconfig locally:
 
 ```
-KUBERNETES_PUBLIC_ADDRESS="212.34.83.23"
-
 kubectl config set-cluster kubernetes-the-hard-way \
 --certificate-authority=ca.pem \
 --embed-certs=true \
