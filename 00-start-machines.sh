@@ -11,7 +11,7 @@ cloudctl project create \
     --name ${PROJECT_NAME} \
     --description "${PROJECT_NAME}"
 
-export PROJECT_ID=$(metalctl project ls | grep "${PROJECT_NAME}" | cut -f1)
+export PROJECT_ID=$(metalctl project ls --name ${PROJECT_NAME} -o template --template "{{ .meta.id }}")
 
 # Create Network
 metalctl network allocate \
@@ -19,10 +19,7 @@ metalctl network allocate \
     --partition ${PARTITION} \
     --project ${PROJECT_ID}
 
-export NETWORK_ID=$(metalctl network list \
-                        -o template --template "{{ .id }} {{ .name }}" \
-                    | grep "${PROJECT_NAME}" \
-                    | cut -d" " -f1)
+export NETWORK_ID=$(metalctl network ls --project ${PROJECT_ID} -o template --template "{{ .id }}" )
 
 # Create Firewall
 metalctl firewall create \
