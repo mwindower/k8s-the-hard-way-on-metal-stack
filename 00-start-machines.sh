@@ -2,7 +2,7 @@
 
 export PARTITION="nbg-w8101"
 export MACHINE_SIZE="c1-xlarge-x86"
-export PROJECT_NAME="k8s-the-hard-way"
+export PROJECT_NAME="k8s-the-hard-way-muhi"
 export FIREWALL_IMAGE="firewall-ubuntu-2.0.20200617"
 export WORKER_IMAGE="ubuntu-20.04.20200331"
 

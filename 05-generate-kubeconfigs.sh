@@ -2,8 +2,9 @@
 
 set -ex
 
-WORKER_EXTERNAL_IPS=()
-CONTROLLER_EXTERNAL_IPS=()
+WORKER_EXTERNAL_IPS=("212.34.83.23" "212.34.83.24" "212.34.83.25") # to be filled
+CONTROLLER_EXTERNAL_IPS=("212.34.83.20" "212.34.83.21" "212.34.83.22") # to be filled
+
 
 # Generate kubeconfigs for every worker node
 for instance in worker-0 worker-1 worker-2; do

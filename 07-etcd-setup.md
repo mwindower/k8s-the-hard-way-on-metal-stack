@@ -5,7 +5,8 @@ Follow https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/master/do
 Some adoptions have to be considered:
 
 ```
-export CONTROLLER_INTERNAL_IPS=("10.3.12.2" "10.3.12.3" "10.3.12.4")
+export CONTROLLER_INTERNAL_IPS=("10.3.156.2" "10.3.156.3" "10.3.156.4")
+
 cat <<EOF | sudo tee /etc/systemd/system/etcd.service
 [Unit]
 Description=etcd
