@@ -3,7 +3,7 @@
 set -ex
 
 ENCRYPTION_KEY=$(head -c 32 /dev/urandom | base64)
-CONTROLLER_EXTERNAL_IPS=("212.34.83.20" "212.34.83.21" "212.34.83.22") # to be filled
+CONTROLLER_EXTERNAL_IPS=("") # to be filled
 
 
 cat > encryption-config.yaml <<EOF

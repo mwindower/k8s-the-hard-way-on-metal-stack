@@ -2,8 +2,8 @@
 
 set -ex
 
-WORKER_EXTERNAL_IPS=("212.34.83.23" "212.34.83.24" "212.34.83.25") # to be filled
-CONTROLLER_EXTERNAL_IPS=("212.34.83.20" "212.34.83.21" "212.34.83.22") # to be filled
+WORKER_EXTERNAL_IPS=("") # to be filled
+CONTROLLER_EXTERNAL_IPS=("") # to be filled
 
 for i in {0..2}; do
     instance="worker-${i}"
