@@ -3,6 +3,9 @@
 Follow https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/master/docs/
 08-bootstrapping-kubernetes-controllers.md
 
+With these adoptions for the kube-apiserver and kube-controller-manager service:
+
+```
 cat <<EOF | sudo tee /etc/systemd/system/kube-apiserver.service
 [Unit]
 Description=Kubernetes API Server
@@ -44,7 +47,9 @@ RestartSec=5
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
+```
 cat <<EOF | sudo tee /etc/systemd/system/kube-controller-manager.service
 [Unit]
 Description=Kubernetes Controller Manager
@@ -70,6 +75,7 @@ RestartSec=5
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
 But Loadbalancer-Creation is not needed, just assign the `$KUBERNETES_PUBLIC_ADDRESS` to the loopback device of every controller:
 
