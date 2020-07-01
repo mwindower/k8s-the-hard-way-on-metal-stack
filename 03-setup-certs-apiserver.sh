@@ -2,7 +2,7 @@
 
 set -ex
 
-CONTROLLER_INTERNAL_IPS="10.3.12.2,10.3.12.3,10.3.12.4"
+CONTROLLER_INTERNAL_IPS="10.3.156.2,10.3.156.3,10.3.156.4"
 KUBERNETES_HOSTNAMES=kubernetes,kubernetes.default,kubernetes.default.svc,kubernetes.default.svc.cluster,kubernetes.svc.cluster.local
 
 cat > kubernetes-csr.json <<EOF
