@@ -1,0 +1,11 @@
+{
+  "ignition": { "version": "2.2.0" },
+  "storage": {
+    "files": [{
+      "filesystem": "root",
+      "path": "/etc/sudoers.d/90-metal-user",
+      "mode": 440,
+      "contents": { "source": "data:,metal%20ALL%3D%28ALL%29%20NOPASSWD%3AALL" }
+    }]
+  }
+}
