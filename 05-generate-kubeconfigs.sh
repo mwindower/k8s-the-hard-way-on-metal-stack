@@ -1,9 +1,14 @@
 #!/bin/bash
 
+if [[ ! -v KUBERNETES_PUBLIC_ADDRESS ]]; then
+    echo "KUBERNETES_PUBLIC_ADDRESS is not set"
+    exit 1
+fi
+
 set -ex
 
-WORKER_EXTERNAL_IPS=("") # to be filled
-CONTROLLER_EXTERNAL_IPS=("") # to be filled
+WORKER_EXTERNAL_IPS=("" "" "") # to be filled
+CONTROLLER_EXTERNAL_IPS=("" "" "") # to be filled
 
 
 # Generate kubeconfigs for every worker node
