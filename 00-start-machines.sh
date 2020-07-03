@@ -38,6 +38,7 @@ for i in {0..2}; do \
         --image=${WORKER_IMAGE} \
         --size=${MACHINE_SIZE} \
         --networks=${NETWORK_ID},internet \
+        --userdata "@./machine.ign" \
         --hostname=controller-${i};
 done
 
@@ -49,6 +50,7 @@ for i in {0..2}; do \
         --image=${WORKER_IMAGE} \
         --size=${MACHINE_SIZE} \
         --networks=${NETWORK_ID},internet \
+        --userdata "@./machine.ign" \
         --hostname=worker-${i};
 done
 
