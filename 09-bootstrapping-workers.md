@@ -80,7 +80,7 @@ export WORKER_INTERNAL_IPS=()
 
 kubectl proxy --port=8080 &
 for i in {0..2}; do \
-  kubectl taint node worker-$0 node.cloudprovider.kubernetes.io/uninitialized=true:NoSchedule-
+  kubectl taint node worker-${i} node.cloudprovider.kubernetes.io/uninitialized=true:NoSchedule-
   url="http://localhost:8080/api/v1/nodes/worker-${i}/status"
   data=$(cat <<END
 [
